@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tageducationhub.lovable.app/sitemap.xml

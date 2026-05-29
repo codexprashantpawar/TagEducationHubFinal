@@ -1,42 +1,40 @@
-import hero from "@/assets/bg2.png";
-// import hero from "@/assets/hero-campus.jpg";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
+import { WordCloudBackground } from "@/components/sections/WordCloudBackground";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[100svh] w-full overflow-hidden">
-      <img
-        src={hero}
-        alt="TAG learners on campus"
-        className="absolute inset-0 h-full w-full object-cover"
-        width={1920}
-        height={1280}
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/80" />
+    <section className="relative min-h-[90vh] w-[100vw] max-w-[100vw] overflow-hidden">
+      <WordCloudBackground />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0d1b2a]/80 via-[#0d1b2a]/60 to-[#0d1b2a]/92" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0d1b2a]/50 via-transparent to-[#0d1b2a]/35" />
 
-      <div className="relative container-tag flex flex-col justify-end min-h-[100svh] pb-24 pt-44 text-white">
-        <p className="font-serif text-3xl md:text-4xl font-bold tracking-tight text-white mb-3">
+      <div className="relative container-tag flex min-h-[90vh] flex-col justify-end pb-28 pt-48 text-white md:pb-36 md:pt-52">
+        <p className="mb-4 font-serif text-4xl font-bold tracking-[0.04em] text-white md:text-5xl lg:text-6xl">
           TAG Education Hub
         </p>
-        <p className="font-serif italic text-xl md:text-2xl text-white/95 mb-6">
+        <p className="mb-3 font-serif text-2xl font-medium italic text-[#e8c872] md:text-3xl lg:text-[2rem]">
+          Learning Beyond Learning
+        </p>
+        <p className="mb-8 font-serif text-xl italic text-white/95 md:text-2xl">
           TAG – The Atelier Gurukula
         </p>
-        <div className="flex items-center gap-3 mb-6">
-          <span className="h-2 w-2 rounded-full bg-crimson animate-pulse" />
-          <p className="text-sm md:text-base tracking-wide font-medium">
-            An Integrated Hub for Learning &amp; Development
+        <div className="mb-8 flex items-center gap-3">
+          <span className="h-2 w-2 animate-pulse rounded-full bg-[#e8c872]" />
+          <p className="text-sm font-medium tracking-wide md:text-base">
+            Empowering Communication · Inspiring Excellence
           </p>
         </div>
-      <h1 className="font-serif font-medium text-2xl sm:text-3xl md:text-3xl lg:text-4xl leading-tight tracking-tight max-w-4xl">
-  Global Learning · Guided by Values · Grounded in Wisdom
-</h1>
-        <div className="mt-10 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-          <Link to="/programs" className="group inline-flex items-center gap-4 text-white">
-            <span className="grid place-items-center h-14 w-14 rounded-full border border-white group-hover:bg-white group-hover:text-ink transition-colors">
-              <ArrowRight className="h-5 w-5" />
-            </span>
-            <span className="text-lg">Explore our programs</span>
+        <h1 className="max-w-4xl font-serif text-2xl font-medium leading-tight tracking-tight text-white/65 sm:text-3xl md:text-3xl lg:text-4xl">
+          Global Learning · Guided by Values · Grounded in Wisdom
+        </h1>
+        <div className="mt-12 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+          <Link
+            to="/programs"
+            className="btn-interactive group inline-flex items-center gap-2.5 rounded-sm bg-[#1a5568] px-7 py-3.5 text-sm font-semibold tracking-wide text-white shadow-md transition-all duration-300 hover:bg-[#134a5c] hover:shadow-lg"
+          >
+            Explore our programs
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
       </div>

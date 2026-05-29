@@ -1,4 +1,5 @@
 import { Globe, Heart, BookOpen } from "lucide-react";
+import { HeadingReveal } from "@/components/HeadingReveal";
 
 const pillars = [
   { icon: Globe, title: "Global Learning", text: "Exposure to modern and international learning practices." },
@@ -8,21 +9,27 @@ const pillars = [
 
 export function Pillars() {
   return (
-    <section className="bg-cream py-24 md:py-32">
+    <section className="section-padding bg-cream">
       <div className="container-tag">
-        <div className="max-w-3xl mb-16">
-          <p className="text-xs uppercase tracking-[0.25em] text-crimson font-bold mb-4">TAG Educational Philosophy
-          </p>
-        <h2 className="font-serif font-bold text-4xl md:text-5xl leading-tight text-ink text-left max-w-4xl">
-  Three pillars that shape every learner.
-</h2>
+        <div className="mb-16 max-w-3xl">
+          <p className="section-tag">TAG Educational Philosophy</p>
+          <HeadingReveal className="max-w-4xl text-left font-serif text-4xl font-bold leading-tight text-ink md:text-5xl">
+            Three pillars that shape every learner.
+          </HeadingReveal>
         </div>
-        <div className="grid md:grid-cols-3 gap-px bg-border border">
-          {pillars.map((p) => (
-            <div key={p.title} className="bg-cream p-10 md:p-12 group hover:bg-background transition-colors">
-              <p.icon className="h-8 w-8 text-crimson mb-8" strokeWidth={1.25} />
-              <h3 className="font-serif font-bold text-3xl md:text-4xl text-ink mb-4">{p.title}</h3>
-              <p className="text-foreground/75 leading-relaxed text-lg">{p.text}</p>
+        <div className="grid gap-6 md:grid-cols-3 md:gap-8">
+          {pillars.map((p, i) => (
+            <div
+              key={p.title}
+              className="card-lift group rounded-xl border border-border/50 border-t-[3px] border-t-crimson bg-white p-10 shadow-sm md:p-12"
+            >
+              <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-full bg-crimson/8 transition-colors group-hover:bg-crimson/12">
+                <p.icon className="h-10 w-10 text-crimson" strokeWidth={1.25} />
+              </div>
+              <HeadingReveal as="h3" delay={i * 120} className="mb-4 font-serif text-3xl font-bold text-ink md:text-[2.25rem]">
+                {p.title}
+              </HeadingReveal>
+              <p className="text-lg leading-relaxed text-foreground/75">{p.text}</p>
             </div>
           ))}
         </div>

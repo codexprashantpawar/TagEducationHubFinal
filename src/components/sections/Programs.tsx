@@ -1,8 +1,8 @@
-import p1 from "@/assets/programs-1.jpg";
-import p2 from "@/assets/programs-2.jpg";
-import p3 from "@/assets/programs-3.jpg";
 import { Link } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { HeadingReveal } from "@/components/HeadingReveal";
+
+const UNSPLASH = (id: string) => `https://images.unsplash.com/photo-${id}?w=800&q=80`;
 
 const programs = [
   {
@@ -10,51 +10,77 @@ const programs = [
     title: "TAG Global English Excellence Program",
     sub: "In association with Trinity College London",
     text: "A high-impact English proficiency and communication development program designed to help students build confidence, fluency, and globally relevant language skills.",
-    img: p1,
+    img: UNSPLASH("1475721027785-f74eccf877e2"),
+    borderClass: "border-t-crimson",
   },
   {
     tag: "Upcoming Preschool Educator Development Program",
     title: "TAG Educator Excellence Program",
     sub: "Upgrade Your Teachers. Elevate Your Preschool.",
     text: "A comprehensive educator development initiative for preschool teachers and institutions committed to building confident educators and future-ready learning environments.",
-    img: p2,
+    img: UNSPLASH("1524178232363-1fb2b075b655"),
+    borderClass: "border-t-[#0d9488]",
   },
   {
     tag: "Awards 2026",
     title: "TAG Pune Educator Innovation Awards 2026",
     sub: "Celebrating Creativity • Innovation • Transformative Teaching",
     text: "A prestigious platform recognizing educators who inspire learning through creativity, collaboration, and innovative teaching practices aligned with NEP 2020.",
-    img: p3,
+    img: UNSPLASH("1503454537195-1dcabb73ffb9"),
+    borderClass: "border-t-[#d97706]",
   },
 ];
 
 export function Programs() {
   return (
-    <section className="py-24 md:py-32 bg-background">
+    <section className="section-padding bg-background">
       <div className="container-tag">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+        <div className="mb-16 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-3xl">
-            <p className="text-xs uppercase tracking-[0.25em] text-crimson font-bold mb-4">Our Offerings · TAG Signature Learning &amp; Development Series
+            <p className="section-tag">
+              Our Offerings · TAG Signature Learning &amp; Development Series
             </p>
-           <h2 className="font-serif font-bold text-4xl md:text-5xl text-ink leading-tight">
-  Thoughtfully designed programs that support learning, creativity, communication, well-being and lifelong development.
-</h2>
+            <HeadingReveal className="font-serif text-4xl font-bold leading-tight text-ink md:text-5xl">
+              Thoughtfully designed programs that support learning, creativity, communication, well-being and lifelong development.
+            </HeadingReveal>
           </div>
-          <Link to="/programs" className="inline-flex items-center gap-2 text-sm font-medium border-b border-ink pb-1 hover:text-crimson hover:border-crimson transition-colors w-fit">
-            View all offerings <ArrowUpRight className="h-4 w-4" />
+          <Link to="/programs" className="btn-secondary group shrink-0 rounded-sm">
+            View all offerings
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid gap-8 md:grid-cols-3 md:gap-10">
           {programs.map((p) => (
-            <article key={p.title} className="group">
-              <div className="relative overflow-hidden aspect-[4/5] mb-6 bg-muted">
-                <img src={p.img} alt={p.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <article
+              key={p.title}
+              className={`card-lift group flex flex-col overflow-hidden rounded-xl border border-border/50 bg-white shadow-sm border-t-[3px] ${p.borderClass}`}
+            >
+              <div className="img-hover relative aspect-video overflow-hidden bg-muted">
+                <img
+                  src={p.img}
+                  alt={p.title}
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0d1b2a]/85 via-[#0d1b2a]/25 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
+                  <h3 className="font-serif text-xl font-bold leading-tight text-white md:text-2xl">
+                    {p.title}
+                  </h3>
+                </div>
               </div>
-              <p className="text-xs uppercase tracking-[0.2em] text-crimson font-bold mb-3">{p.tag}</p>
-              <h3 className="font-serif font-bold text-2xl md:text-3xl text-ink mb-2 group-hover:text-crimson transition-colors leading-tight">{p.title}</h3>
-              <p className="font-serif italic text-foreground/70 mb-3">{p.sub}</p>
-              <p className="text-foreground/75 leading-relaxed">{p.text}</p>
+              <div className="flex flex-1 flex-col p-6 md:p-8">
+                <p className="section-tag !mb-3 !text-[0.65rem]">{p.tag}</p>
+                <p className="mb-3 font-serif italic text-foreground/70">{p.sub}</p>
+                <p className="mb-6 leading-relaxed text-foreground/75">{p.text}</p>
+                <Link
+                  to="/programs"
+                  className="nav-link-underline mt-auto inline-flex w-fit items-center gap-1 text-sm font-semibold text-crimson"
+                >
+                  Learn More →
+                </Link>
+              </div>
             </article>
           ))}
         </div>

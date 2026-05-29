@@ -2,7 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logoremovebgpreview.png";
-// import logo from "@/assets/logo2.png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -21,7 +20,6 @@ export function Header({ transparent = false }: { transparent?: boolean }) {
         transparent ? "" : "bg-background border-b"
       }`}
     >
-      {/* Top detail bar */}
       <div
         className={`w-full ${
           transparent
@@ -29,7 +27,7 @@ export function Header({ transparent = false }: { transparent?: boolean }) {
             : "bg-ink text-white"
         }`}
       >
-        <div className="container-tag flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 py-2 text-xs sm:text-sm">
+        <div className="container-tag flex flex-col gap-1 py-2 text-xs sm:flex-row sm:items-center sm:justify-between sm:text-sm">
           <p className="font-serif tracking-tight">TAG – The Atelier Gurukula</p>
           <p className="tracking-wide text-white/80">
             Global Learning • Guided by Values • Grounded in Wisdom
@@ -42,14 +40,16 @@ export function Header({ transparent = false }: { transparent?: boolean }) {
           <img
             src={logo}
             alt="TAG Education Hub"
-            className="h-20 md:h-24 w-auto object-contain"
+            className={`h-20 w-auto object-contain md:h-24 ${
+              transparent ? "brightness-0 invert" : ""
+            }`}
           />
         </Link>
 
         <button
           aria-label="Open menu"
           onClick={() => setOpen(true)}
-          className={`inline-flex items-center gap-2 px-4 py-2 text-sm tracking-wide ${
+          className={`btn-interactive inline-flex items-center gap-2 px-4 py-2 text-sm tracking-wide ${
             transparent
               ? "text-white/95 hover:text-white"
               : "text-foreground/80 hover:text-primary"
@@ -60,22 +60,18 @@ export function Header({ transparent = false }: { transparent?: boolean }) {
         </button>
       </div>
 
-      {/* Full-screen menu overlay */}
       {open && (
-        <div className="fixed inset-0 z-50 bg-ink text-white flex flex-col overflow-hidden">
-          {/* ── Watermark layer ── */}
+        <div className="fixed inset-0 z-50 flex flex-col overflow-hidden bg-ink text-white">
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center select-none"
+            className="pointer-events-none absolute inset-0 flex select-none flex-col items-center justify-center"
           >
-            {/* Large ghosted brand name */}
             <span
-              className="font-serif text-center leading-none"
+              className="text-center font-serif leading-none"
               style={{
                 fontSize: "clamp(5rem, 18vw, 14rem)",
                 opacity: 0.13,
                 letterSpacing: "-0.02em",
-                userSelect: "none",
                 color: "#ffffff",
                 WebkitTextStroke: "1px rgba(255,255,255,0.4)",
               }}
@@ -83,54 +79,44 @@ export function Header({ transparent = false }: { transparent?: boolean }) {
               TAG
             </span>
             <span
-              className="font-serif text-center leading-none mt-3"
+              className="mt-3 text-center font-serif leading-none"
               style={{
                 fontSize: "clamp(1.4rem, 5.5vw, 4.2rem)",
                 opacity: 0.13,
                 letterSpacing: "0.12em",
-                userSelect: "none",
                 color: "#ffffff",
               }}
             >
               EDUCATION HUB
             </span>
-
-
           </div>
 
-          {/* ── Top bar: logo + close ── */}
-          <div className="container-tag flex items-center justify-between py-5 shrink-0 relative z-10">
+          <div className="container-tag relative z-10 flex shrink-0 items-center justify-between py-5">
             <Link
               to="/"
               onClick={() => setOpen(false)}
               className="flex items-center gap-3"
             >
-              <img
-                src={logo}
-                alt="TAG"
-                // className="h-14 w-auto object-contain bg-white rounded-md p-1.5"
-                className="h-14 w-auto object-contain"
-              />
+              <img src={logo} alt="TAG" className="h-14 w-auto object-contain brightness-0 invert" />
             </Link>
             <button
               onClick={() => setOpen(false)}
               aria-label="Close"
-              className="inline-flex items-center gap-2 px-4 py-2 text-sm tracking-wide text-white/80 hover:text-white transition-colors"
+              className="btn-interactive inline-flex items-center gap-2 px-4 py-2 text-sm tracking-wide text-white/80 transition-colors hover:text-white"
             >
               <span>Close</span>
               <X className="h-5 w-5" />
             </button>
           </div>
 
-          {/* ── Nav links ── */}
-          <div className="flex-1 overflow-y-auto relative z-10">
-            <nav className="container-tag pt-8 pb-16 flex flex-col gap-2 md:gap-3">
+          <div className="relative z-10 flex-1 overflow-y-auto">
+            <nav className="container-tag flex flex-col gap-2 pb-16 pt-8 md:gap-3">
               {links.map((l) => (
                 <Link
                   key={l.to}
                   to={l.to}
                   onClick={() => setOpen(false)}
-                  className="font-serif text-3xl sm:text-4xl md:text-5xl leading-tight text-white/95 hover:text-crimson transition-colors"
+                  className="nav-link-underline font-serif text-3xl leading-tight text-white/95 transition-colors hover:text-crimson sm:text-4xl md:text-5xl"
                 >
                   {l.label}
                 </Link>
@@ -138,9 +124,8 @@ export function Header({ transparent = false }: { transparent?: boolean }) {
             </nav>
           </div>
 
-          {/* ── Bottom tagline ── */}
-          <div className="container-tag pb-6 pt-2 shrink-0 relative z-10">
-            <p className="text-xs tracking-[0.18em] uppercase text-white/30 font-sans">
+          <div className="container-tag relative z-10 shrink-0 pb-6 pt-2">
+            <p className="font-sans text-xs uppercase tracking-[0.18em] text-white/30">
               Global Learning · Guided by Values · Grounded in Wisdom
             </p>
           </div>

@@ -1,3 +1,5 @@
+import { HeadingReveal } from "@/components/HeadingReveal";
+
 export function PageHero({
   eyebrow,
   title,
@@ -8,17 +10,18 @@ export function PageHero({
   subtitle?: string;
 }) {
   return (
-    <section className="pt-44 pb-16 bg-cream border-b">
+    <section className="border-b bg-cream pb-20 pt-44 md:pb-24 md:pt-48">
       <div className="container-tag max-w-5xl text-center">
-        <p className="text-[11px] uppercase tracking-[0.32em] text-crimson font-bold mb-5">
-          {eyebrow}
-        </p>
-        <h1 className="font-serif font-bold text-3xl sm:text-4xl md:text-5xl leading-[1.1] text-ink">
+        <p className="section-tag !mb-6">{eyebrow}</p>
+        <HeadingReveal
+          as="h1"
+          className="font-serif text-3xl font-bold leading-[1.1] text-ink sm:text-4xl md:text-5xl lg:text-[3.25rem]"
+        >
           {title}
-        </h1>
+        </HeadingReveal>
         <Ornament />
         {subtitle && (
-          <p className="mt-2 text-base md:text-lg text-foreground/70 max-w-2xl mx-auto">
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-foreground/70 md:text-lg">
             {subtitle}
           </p>
         )}
@@ -29,7 +32,7 @@ export function PageHero({
 
 export function Ornament() {
   return (
-    <div className="flex items-center justify-center gap-3 mt-6">
+    <div className="mt-8 flex items-center justify-center gap-3">
       <span className="h-px w-16 bg-crimson/40" />
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-crimson">
         <path

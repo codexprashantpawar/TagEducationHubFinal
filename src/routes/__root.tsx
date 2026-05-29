@@ -2,13 +2,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
   Link,
+  HeadContent,
   createRootRouteWithContext,
   useRouter,
-  HeadContent,
-  Scripts,
 } from "@tanstack/react-router";
-
-import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
   return (
@@ -73,45 +70,38 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "TAG Education Hub — The Atelier Gurukula" },
-      { name: "description", content: "TAG – The Atelier Gurukula. Global Learning · Guided by Values · Grounded in Wisdom. An integrated hub for learning & development." },
+      {
+        name: "description",
+        content:
+          "TAG – The Atelier Gurukula. Global Learning · Guided by Values · Grounded in Wisdom. An integrated hub for learning & development.",
+      },
       { name: "author", content: "TAG Education Hub" },
       { property: "og:title", content: "TAG Education Hub — The Atelier Gurukula" },
-      { property: "og:description", content: "Global Learning · Guided by Values · Grounded in Wisdom." },
+      {
+        property: "og:description",
+        content: "Global Learning · Guided by Values · Grounded in Wisdom.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "TAG Education Hub" },
-      { name: "twitter:description", content: "Global Learning · Guided by Values · Grounded in Wisdom." },
+      {
+        name: "twitter:description",
+        content: "Global Learning · Guided by Values · Grounded in Wisdom.",
+      },
       { property: "og:site_name", content: "TAG Education Hub" },
     ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-    ],
   }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
+      <HeadContent />
       <Outlet />
     </QueryClientProvider>
   );

@@ -3,17 +3,17 @@ import koyaa from "@/assets/partner-koyaa.png";
 
 export function Partners() {
   return (
-    <section className="py-20 border-y bg-background">
+    <section className="section-padding border-y bg-background">
       <div className="container-tag">
-        <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground text-center mb-12">
+        <p className="section-tag !mb-12 text-center !text-muted-foreground">
           In Collaboration With
         </p>
-        <div className="grid grid-cols-2 gap-8 md:gap-16 items-center max-w-3xl mx-auto">
+        <div className="mx-auto grid max-w-3xl grid-cols-2 items-center gap-8 md:gap-16">
           <div className="flex flex-col items-center gap-4">
             <img
               src={trinity}
               alt="Trinity College London"
-              className="h-16 md:h-20 w-auto object-contain"
+              className="h-16 w-auto object-contain md:h-20"
             />
             <p className="text-xs uppercase tracking-widest text-muted-foreground">
               Trinity College London
@@ -23,7 +23,7 @@ export function Partners() {
             <img
               src={koyaa}
               alt="Koyaa Fitness Federation"
-              className="h-20 md:h-24 w-auto object-contain"
+              className="h-20 w-auto object-contain md:h-24"
             />
             <p className="text-xs uppercase tracking-widest text-muted-foreground">
               Koyaa Fitness Federation

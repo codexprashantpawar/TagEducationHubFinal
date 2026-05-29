@@ -2,7 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/PageHero";
+import { FloatingLabelInput } from "@/components/FloatingLabelField";
 import { Mail, Phone, MapPin } from "lucide-react";
+
+const MAP_EMBED =
+  "https://maps.google.com/maps?q=A+631,+Gera%27s+Imperium+Gateway,+Nasik+Phata,+Pune+411034&hl=en&z=15&output=embed";
 
 export const Route = createFileRoute("/contact")({
   component: Contact,
@@ -23,23 +27,55 @@ function Contact() {
     <Layout>
       <PageHero eyebrow="Contact Details" title="TAG Education Hub." />
 
-      <Reveal><section className="py-20 bg-background">
-        <div className="container-tag max-w-4xl grid md:grid-cols-3 gap-6">
-          {[
-            { Icon: MapPin, label: "Address", value: "A 631, Gera's Imperium Gateway A & C, Nasik Phata, Pune - 411034" },
-            { Icon: Phone, label: "Phone", value: "+91 92720 97927" },
-            { Icon: Mail, label: "Email", value: "tageducationhub@gmail.com" },
-          ].map(({ Icon, label, value }) => (
-            <div key={label} className="rounded-xl border border-border bg-cream p-7 text-center hover:shadow-md transition-shadow">
-              <div className="mx-auto h-12 w-12 rounded-full bg-crimson/10 grid place-items-center mb-4">
-                <Icon className="h-5 w-5 text-crimson" strokeWidth={1.5} />
-              </div>
-              <p className="text-[11px] uppercase tracking-[0.32em] text-muted-foreground mb-2">{label}</p>
-              <p className="font-serif font-semibold text-lg md:text-xl text-ink leading-snug">{value}</p>
+      <Reveal>
+        <section className="section-padding bg-background">
+          <div className="container-tag max-w-4xl">
+            <div className="mb-16 grid gap-6 md:grid-cols-3">
+              {[
+                { Icon: MapPin, label: "Address", value: "A 631, Gera's Imperium Gateway A & C, Nasik Phata, Pune - 411034" },
+                { Icon: Phone, label: "Phone", value: "+91 92720 97927" },
+                { Icon: Mail, label: "Email", value: "tageducationhub@gmail.com" },
+              ].map(({ Icon, label, value }) => (
+                <div
+                  key={label}
+                  className="card-lift rounded-xl border border-border/60 border-t-[3px] border-t-crimson bg-cream p-8 text-center shadow-sm"
+                >
+                  <div className="mx-auto mb-5 grid h-14 w-14 place-items-center rounded-full bg-crimson/10">
+                    <Icon className="h-5 w-5 text-crimson" strokeWidth={1.5} />
+                  </div>
+                  <p className="section-tag !mb-3 !text-[0.65rem] !text-muted-foreground">{label}</p>
+                  <p className="font-serif text-lg font-semibold leading-snug text-ink md:text-xl">{value}</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </section></Reveal>
+
+            <div className="img-hover mb-16 overflow-hidden rounded-xl border border-border/60 shadow-sm">
+              <iframe
+                title="TAG Education Hub location"
+                src={MAP_EMBED}
+                className="aspect-video w-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
+
+            <form
+              className="mx-auto flex max-w-[640px] flex-col gap-6"
+              onSubmit={(e) => e.preventDefault()}
+            >
+              <FloatingLabelInput label="Email" type="email" name="email" required autoComplete="email" />
+              <FloatingLabelInput label="Phone" type="tel" name="phone" autoComplete="tel" />
+              <button
+                type="submit"
+                className="btn-primary btn-interactive w-full rounded-sm py-3"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </section>
+      </Reveal>
     </Layout>
   );
 }

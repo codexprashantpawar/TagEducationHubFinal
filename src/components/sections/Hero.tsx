@@ -1,14 +1,24 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
-import { WordCloudBackground } from "@/components/sections/WordCloudBackground";
-
+import logo from "@/assets/tagwordcloud.svg";
+// import logo from "@/assets/logoremovebgpreview.png";
 export function Hero() {
   return (
     <section className="relative min-h-[90vh] w-[100vw] max-w-[100vw] overflow-hidden">
-      <WordCloudBackground />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0d1b2a]/80 via-[#0d1b2a]/60 to-[#0d1b2a]/92" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0d1b2a]/50 via-transparent to-[#0d1b2a]/35" />
-
+     <img
+  src={logo}
+  alt=""
+  aria-hidden="true"
+  className="absolute inset-0 h-full w-full object-cover object-center opacity-40"
+/>
+     <img
+  src={logo}
+  alt=""
+  aria-hidden="true"
+  className="absolute inset-0 h-full w-full object-cover object-center opacity-25"
+/>
+<div className="absolute inset-0 bg-gradient-to-b from-[#0d1b2a]/70 via-[#0d1b2a]/40 to-[#0d1b2a]/80" />
+<div className="absolute inset-0 bg-gradient-to-r from-[#0d1b2a]/30 via-transparent to-[#0d1b2a]/20" />
       <div className="relative container-tag flex min-h-[90vh] flex-col justify-end pb-28 pt-48 text-white md:pb-36 md:pt-52">
         <p className="mb-4 font-serif text-4xl font-bold tracking-[0.04em] text-white md:text-5xl lg:text-6xl">
           TAG Education Hub

@@ -1,6 +1,7 @@
 import { HeadingReveal } from "@/components/HeadingReveal";
+import vission from "@/assets/vision.jpg";
 
-const MISSION_IMG = "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80";
+
 
 const mission = [
   "To strengthen the body through movement and healthy habits.",
@@ -53,7 +54,7 @@ export function Mission() {
         <div className="md:col-span-5">
           <div className="img-hover relative sticky top-24 aspect-[4/5] overflow-hidden rounded-xl shadow-[0_20px_50px_-15px_rgba(0,0,0,0.4)]">
             <img
-              src={MISSION_IMG}
+              src={vission}
               alt="TAG learners"
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover"

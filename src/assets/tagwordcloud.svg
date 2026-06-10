@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" width="1400" height="860">
+  <rect width="1400" height="860" fill="#ffffff"/>
+  <style>
+    text { font-family: 'Georgia', 'Times New Roman', serif; font-weight: bold; }
+    .dg  { fill: #1e4d0f; }
+    .og  { fill: #c85a00; }
+    .gd  { fill: #b8880a; }
+    .rb  { fill: #7a2000; }
+    .am  { fill: #a06010; }
+    .mg  { fill: #3a6b20; }
+  </style>
+
+  <!-- ── EXTRA LARGE (weight=large, hero words) ── -->
+  <text x="700" y="490" font-size="118" text-anchor="middle" class="dg">Communicate</text>
+  <text x="700" y="350" font-size="96"  text-anchor="middle" class="mg">Excellence</text>
+
+  <!-- LARGE left / right flanks -->
+  <text x="140" y="430" font-size="74" text-anchor="middle" class="og">Confidence</text>
+  <text x="1255" y="455" font-size="74" text-anchor="middle" class="rb">Leadership</text>
+  <text x="240" y="555" font-size="70" text-anchor="middle" class="gd">Growth</text>
+  <text x="1150" y="360" font-size="70" text-anchor="middle" class="am">Creativity</text>
+  <text x="700" y="610" font-size="66" text-anchor="middle" class="rb">Transformation</text>
+  <text x="430" y="228" font-size="64" text-anchor="middle" class="dg">Empower</text>
+  <text x="990" y="228" font-size="64" text-anchor="middle" class="og">Inspire</text>
+  <text x="185" y="305" font-size="60" text-anchor="middle" class="am">Learn</text>
+  <text x="1235" y="300" font-size="60" text-anchor="middle" class="gd">Innovation</text>
+
+  <!-- Holistic Development - rotated like reference image vertical words -->
+  <text x="1368" y="540" font-size="44" text-anchor="middle" transform="rotate(90,1368,540)" class="rb">Holistic Development</text>
+  <text x="32"   y="490" font-size="44" text-anchor="middle" transform="rotate(-90,32,490)"  class="dg">Transformation</text>
+
+  <!-- ── MEDIUM words ── -->
+  <text x="700"  y="160" font-size="46" text-anchor="middle" class="og">Global Exposure</text>
+  <text x="1145" y="150" font-size="42" text-anchor="middle" class="am">Critical Thinking</text>
+  <text x="700"  y="710" font-size="42" text-anchor="middle" class="dg">Personality Development</text>
+  <text x="270"  y="660" font-size="40" text-anchor="middle" class="rb">Communication Skills</text>
+  <text x="1130" y="600" font-size="40" text-anchor="middle" class="mg">Confidence Building</text>
+  <text x="280"  y="740" font-size="38" text-anchor="middle" class="am">Public Speaking</text>
+  <text x="1120" y="680" font-size="38" text-anchor="middle" class="og">Fluency</text>
+  <text x="700"  y="790" font-size="38" text-anchor="middle" class="rb">Skill Development</text>
+  <text x="130"  y="640" font-size="36" text-anchor="middle" class="gd">Expression</text>
+  <text x="1270" y="580" font-size="36" text-anchor="middle" class="dg">Knowledge</text>
+  <text x="700"  y="80"  font-size="36" text-anchor="middle" class="mg">Presentation Skills</text>
+  <text x="430"  y="790" font-size="34" text-anchor="middle" class="og">Future Ready</text>
+  <text x="970"  y="790" font-size="34" text-anchor="middle" class="am">Academic Excellence</text>
+  <text x="130"  y="720" font-size="34" text-anchor="middle" class="rb">Collaboration</text>
+  <text x="1265" y="730" font-size="34" text-anchor="middle" class="gd">Teacher Training</text>
+  <text x="195"  y="200" font-size="32" text-anchor="middle" class="dg">Trinity</text>
+  <text x="1205" y="210" font-size="32" text-anchor="middle" class="og">Learning Ecosystem</text>
+  <text x="430"  y="100" font-size="30" text-anchor="middle" class="am">Student Success</text>
+  <text x="970"  y="100" font-size="30" text-anchor="middle" class="rb">Classroom Excellence</text>
+
+  <!-- ── SMALL words ── -->
+  <text x="700"  y="840" font-size="26" text-anchor="middle" class="dg">Activity-Based Learning</text>
+  <text x="240"  y="830" font-size="24" text-anchor="middle" class="og">Early Learning</text>
+  <text x="1160" y="830" font-size="24" text-anchor="middle" class="am">Child Development</text>
+  <text x="75"   y="800" font-size="22" text-anchor="middle" class="gd">Phonics</text>
+  <text x="1325" y="800" font-size="22" text-anchor="middle" class="rb">Nurturing</text>
+  <text x="430"  y="840" font-size="22" text-anchor="middle" class="mg">Emotional Growth</text>
+  <text x="970"  y="840" font-size="22" text-anchor="middle" class="dg">Creative Teaching</text>
+  <text x="75"   y="390" font-size="22" text-anchor="middle" class="rb">Curiosity</text>
+  <text x="1325" y="390" font-size="22" text-anchor="middle" class="og">Care</text>
+  <text x="75"   y="160" font-size="20" text-anchor="middle" class="am">Joyful Learning</text>
+  <text x="1325" y="160" font-size="20" text-anchor="middle" class="dg">Positive Learning</text>
+  <text x="75"   y="260" font-size="20" text-anchor="middle" class="gd">Teacher Empowerment</text>
+  <text x="1325" y="260" font-size="20" text-anchor="middle" class="mg">Classroom Excellence</text>
+</svg>

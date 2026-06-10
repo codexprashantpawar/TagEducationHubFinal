@@ -5,6 +5,13 @@ import { PageHero } from "@/components/PageHero";
 import { HeadingReveal } from "@/components/HeadingReveal";
 import { Partners } from "@/components/sections/Partners";
 
+import Program from "@/assets/ExcellenceProgram.jpg";
+
+
+import TAGEducatorExcellenceProgram from "@/assets/TAGEducatorExcellenceProgram.jpg";
+import TeacherAward from "@/assets/TeacherAward.png";
+
+
 export const Route = createFileRoute("/programs")({
   component: Programs,
   head: () => ({
@@ -53,7 +60,7 @@ function Programs() {
             </div>
             <div className="img-hover flex justify-end overflow-hidden rounded-xl">
               <img
-                src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&q=80"
+                src={Program}
                 alt="Students in English classroom"
                 className="aspect-[4/3] w-full max-w-sm rounded-xl object-cover shadow-[0_20px_50px_-15px_rgba(13,27,42,0.18)] md:max-w-full"
               />
@@ -127,7 +134,7 @@ function Programs() {
             </div>
             <div className="img-hover flex justify-end overflow-hidden rounded-xl">
               <img
-                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80"
+                src={TAGEducatorExcellenceProgram}
                 alt="Teacher training workshop"
                 className="aspect-[4/3] w-full max-w-sm rounded-xl object-cover shadow-[0_20px_50px_-15px_rgba(13,27,42,0.18)] md:max-w-full"
               />
@@ -232,7 +239,7 @@ function Programs() {
             </div>
             <div className="img-hover flex justify-end overflow-hidden rounded-xl">
               <img
-                src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&q=80"
+                src={TeacherAward}
                 alt="Educator awards ceremony"
                 className="aspect-[4/3] w-full max-w-sm rounded-xl object-cover shadow-[0_20px_50px_-15px_rgba(13,27,42,0.18)] md:max-w-full"
               />
@@ -315,7 +322,7 @@ function Programs() {
             {[
               { d: "25th July 2026", l: "Registration Deadline" },
               { d: "5th August 2026", l: "Submission of Entries" },
-              { d: "August 2026", l: "Presentation & Evaluation Rounds (Exact dates to be shared)" },
+              { d: "30th August 2026", l: "Presentation & Evaluation Rounds (Exact dates to be shared)" },
             ].map((e) => (
               <div key={e.l} className="card-lift rounded-xl bg-background p-6 shadow-sm">
                 <p className="font-serif font-bold text-xl text-ink">{e.d}</p>

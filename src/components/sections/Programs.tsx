@@ -1,7 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { HeadingReveal } from "@/components/HeadingReveal";
-
+import Program from "@/assets/ExcellenceProgram.jpg";
+import TAGEducatorExcellenceProgram from "@/assets/TAGEducatorExcellenceProgram.jpg";
+import TeacherAward from "@/assets/TeacherAward.png";
 const UNSPLASH = (id: string) => `https://images.unsplash.com/photo-${id}?w=800&q=80`;
 
 const programs = [
@@ -10,7 +12,7 @@ const programs = [
     title: "TAG Global English Excellence Program",
     sub: "In association with Trinity College London",
     text: "A high-impact English proficiency and communication development program designed to help students build confidence, fluency, and globally relevant language skills.",
-    img: UNSPLASH("1475721027785-f74eccf877e2"),
+    img: Program,
     borderClass: "border-t-crimson",
   },
   {
@@ -18,7 +20,7 @@ const programs = [
     title: "TAG Educator Excellence Program",
     sub: "Upgrade Your Teachers. Elevate Your Preschool.",
     text: "A comprehensive educator development initiative for preschool teachers and institutions committed to building confident educators and future-ready learning environments.",
-    img: UNSPLASH("1524178232363-1fb2b075b655"),
+    img: TAGEducatorExcellenceProgram,
     borderClass: "border-t-[#0d9488]",
   },
   {
@@ -26,7 +28,7 @@ const programs = [
     title: "TAG Pune Educator Innovation Awards 2026",
     sub: "Celebrating Creativity • Innovation • Transformative Teaching",
     text: "A prestigious platform recognizing educators who inspire learning through creativity, collaboration, and innovative teaching practices aligned with NEP 2020.",
-    img: UNSPLASH("1503454537195-1dcabb73ffb9"),
+    img: TeacherAward,
     borderClass: "border-t-[#d97706]",
   },
 ];

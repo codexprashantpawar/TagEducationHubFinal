@@ -317,19 +317,19 @@ function Programs() {
             ].map((m) => <li key={m} className="flex gap-3"><span className="text-crimson">•</span> {m}</li>)}
           </ul>
 
-          {/* <h3 className="font-serif font-bold text-2xl text-ink mb-4">Event Timeline</h3>
+          <h3 className="font-serif font-bold text-2xl text-ink mb-4">Event Timeline</h3>
           <div className="grid md:grid-cols-3 gap-px bg-border border mb-10">
             {[
-              { d: "25th July 2026", l: "Registration Deadline" },
-              { d: "5th August 2026", l: "Submission of Entries" },
-              { d: "30th August 2026", l: "Presentation & Evaluation Rounds (Exact dates to be shared)" },
+              { d: "-", l: "Registration Deadline" },
+              { d: "-", l: "Submission of Entries" },
+              { d: "_", l: "Presentation & Evaluation Rounds (Exact dates to be shared)" },
             ].map((e) => (
               <div key={e.l} className="card-lift rounded-xl bg-background p-6 shadow-sm">
                 <p className="font-serif font-bold text-xl text-ink">{e.d}</p>
                 <p className="text-xs uppercase tracking-wider text-muted-foreground mt-2">{e.l}</p>
               </div>
             ))}
-          </div> */}
+          </div>
 
           <p className="text-foreground/80">
             <span className="font-bold text-ink">Organised By:</span> TAG Education Hub

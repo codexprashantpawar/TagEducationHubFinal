@@ -48,7 +48,7 @@ export function Header({ transparent = false }: { transparent?: boolean }) {
           <img
             src={logo}
             alt="TAG Education Hub"
-        className="h-14 w-auto object-contain rounded-lg"
+        className="h-24 w-auto object-contain rounded-lg"
           />
         </Link>
 

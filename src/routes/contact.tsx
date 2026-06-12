@@ -16,9 +16,9 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Contact TAG Education Hub. A 631, Gera's Imperium Gateway A & C, Nasik Phata, Pune - 411034. +91 92720 97927. tageducationhub@gmail.com" },
       { property: "og:title", content: "Contact — TAG Education Hub" },
       { property: "og:description", content: "Get in touch with TAG Education Hub." },
-      { property: "og:url", content: "https://tageducationhub.lovable.app/contact" },
+      { property: "og:url", content: "https://www.tageducationhub.com/contact" },
     ],
-    links: [{ rel: "canonical", href: "https://tageducationhub.lovable.app/contact" }],
+    links: [{ rel: "canonical", href: "https://www.tageducationhub.com/contact" }],
   }),
 });
 

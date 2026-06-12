@@ -12,9 +12,9 @@ export const Route = createFileRoute("/founder")({
       { name: "description", content: "Mrs. Rupali Bobade — Founder & Director of TAG Education Hub. M.Sc, B.Ed, MBA, PGDSA, DEAM, IATA, HDISM. 25+ years across Corporate and Education sectors." },
       { property: "og:title", content: "Founder & Director — TAG Education Hub" },
       { property: "og:description", content: "Mrs. Rupali Bobade — Founder & Director of TAG Education Hub." },
-      { property: "og:url", content: "https://tageducationhub.lovable.app/founder" },
+      { property: "og:url", content: "https://www.tageducationhub.com/founder" },
     ],
-    links: [{ rel: "canonical", href: "https://tageducationhub.lovable.app/founder" }],
+    links: [{ rel: "canonical", href: "https://www.tageducationhub.com/founder" }],
   }),
 });
 

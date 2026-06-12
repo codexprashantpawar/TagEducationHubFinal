@@ -20,9 +20,9 @@ export const Route = createFileRoute("/programs")({
       { name: "description", content: "TAG Signature Learning & Development Series — Global English Excellence with Trinity College London, Educator Excellence Program, and Pune Educator Innovation Awards 2026." },
       { property: "og:title", content: "Our Offerings — TAG Education Hub" },
       { property: "og:description", content: "TAG Signature Learning & Development Series." },
-      { property: "og:url", content: "https://tageducationhub.lovable.app/programs" },
+      { property: "og:url", content: "https://www.tageducationhub.com/programs" },
     ],
-    links: [{ rel: "canonical", href: "https://tageducationhub.lovable.app/programs" }],
+    links: [{ rel: "canonical", href: "https://www.tageducationhub.com/programs" }],
   }),
 });
 

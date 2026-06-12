@@ -15,9 +15,9 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "TAG – The Atelier Gurukula is a holistic learning ecosystem blending global learning practices, Indian cultural values and experiential, joyful learning." },
       { property: "og:title", content: "About TAG — TAG Education Hub" },
       { property: "og:description", content: "A holistic learning ecosystem nurturing curious, confident and compassionate learners." },
-      { property: "og:url", content: "https://tageducationhub.lovable.app/about" },
+      { property: "og:url", content: "https://www.tageducationhub.com/about" },
     ],
-    links: [{ rel: "canonical", href: "https://tageducationhub.lovable.app/about" }],
+    links: [{ rel: "canonical", href: "https://www.tageducationhub.com/about" }],
   }),
 });
 

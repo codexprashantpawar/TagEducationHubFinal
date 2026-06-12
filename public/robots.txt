@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tageducationhub.lovable.app/sitemap.xml
+Sitemap: https://www.tageducationhub.com/sitemap.xml

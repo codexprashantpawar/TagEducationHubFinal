@@ -322,7 +322,7 @@ function Programs() {
             {[
               { d: "25th July 2026", l: "Registration Deadline" },
               { d: "5th August 2026", l: "Submission of Entries" },
-              { d: "Exact Date To Be Announced", l: "Presentation & Evaluation Rounds (Exact dates to be shared)" },
+              { d: "0th August 2026", l: "Presentation & Evaluation Rounds" },
             ].map((e) => (
               <div key={e.l} className="card-lift rounded-xl bg-background p-6 shadow-sm">
                 <p className="font-serif font-bold text-xl text-ink">{e.d}</p>
